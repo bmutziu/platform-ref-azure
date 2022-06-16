@@ -13,7 +13,7 @@ spec:
         apiVersion: compute.azure.crossplane.io/v1alpha3
         kind: AKSCluster
         spec:
-          location: West US 2
+          location: Sweden Central
           version: "1.21.7"
       patches:
         - fromFieldPath: spec.id

@@ -17,7 +17,7 @@ spec:
         forProvider:
           version: "11"
           administratorLogin: myadmin
-          location: West US 2
+          location: Sweden Central
           sslEnforcement: Disabled
           storageProfile:
               storageMB: 5120
