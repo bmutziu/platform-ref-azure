@@ -14,6 +14,8 @@ spec:
         apiVersion: azure.platformref.crossplane.io/v1alpha1
         kind: XNetwork
       patches:
+        - fromFieldPath: metadata.labels
+          toFieldPath: metadata.labels
         - fromFieldPath: spec.id
           toFieldPath: spec.id
     - base:
@@ -22,11 +24,13 @@ spec:
       connectionDetails:
         - fromConnectionSecretKey: kubeconfig
       patches:
+        - fromFieldPath: metadata.labels
+          toFieldPath: metadata.labels
         - fromFieldPath: spec.id
           toFieldPath: spec.id
         - fromFieldPath: spec.id
           toFieldPath: spec.writeConnectionSecretToRef.name
-        - fromFieldPath: spec.claimRef.namespace
+        - fromFieldPath: spec.writeConnectionSecretToRef.namespace
           toFieldPath: spec.writeConnectionSecretToRef.namespace
         - fromFieldPath: spec.parameters.nodes.count
           toFieldPath: spec.parameters.nodes.count
@@ -36,6 +40,8 @@ spec:
         apiVersion: azure.platformref.crossplane.io/v1alpha1
         kind: XServices
       patches:
+        - fromFieldPath: metadata.labels
+          toFieldPath: metadata.labels
         - fromFieldPath: spec.id
           toFieldPath: metadata.name
         - fromFieldPath: spec.id
